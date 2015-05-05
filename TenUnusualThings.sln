@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Reference Aliases", "01-Reference Aliases", "{0090C6D1-1D18-4108-83D3-4128A9F051F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Type Forwarding", "02-Type Forwarding", "{826D2C4B-6D1D-4B31-8D97-70E9246075B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Indexes with parameters", "03-Indexes with parameters", "{019A4D86-9580-42CF-93E4-C7D816B815FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Dynamic Hash", "04-Dynamic Hash", "{41FDF3DF-6DC5-43D5-B934-00952AD3D824}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Math.Round", "05-Math.Round", "{C463D193-C398-4204-AB1D-D3571930795A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06-This Struct", "06-This Struct", "{8B91C7E7-FA00-4745-AF20-8C5CD4D47D17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07-Recursive Generics", "07-Recursive Generics", "{24C4A29F-C283-433B-A8B1-E517F3C2697A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08-Closure variables", "08-Closure variables", "{9CF2D123-5781-44BE-BDE6-5E892CFBFAA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09-Code Contract mirrors", "09-Code Contract mirrors", "{84604EFC-97FB-4C97-A85B-76E274227E12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10-aspnet_intern", "10-aspnet_intern", "{09A98156-6E76-4FE1-B3F2-73CC7BE8AE45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11-VS Extensions", "11-VS Extensions", "{448EF976-8982-4C0C-AF7D-CA9BD1D70CB5}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
