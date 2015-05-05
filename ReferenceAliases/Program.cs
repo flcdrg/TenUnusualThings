@@ -8,6 +8,7 @@ namespace ReferenceAliases
     {
         static void Main(string[] args)
         {
+#pragma warning disable 0168
             ILog logger;
         }
     }
