@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Reference Aliases", "01-Reference Aliases", "{0090C6D1-1D18-4108-83D3-4128A9F051F9}"
 EndProject
@@ -58,6 +58,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperWebApp2", "SuperWebApp2\SuperWebApp2.csproj", "{B61D7BDA-4A4C-41D6-B4C4-09567BCBB558}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperWebApp3", "SuperWebApp3\SuperWebApp3.csproj", "{6E77DF07-04CD-4252-8231-4602734FD073}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14-Code Aware Libraries", "14-Code Aware Libraries", "{C352576A-81C1-429E-A0D4-1741B7EBB7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAware", "CodeAware\CodeAware.csproj", "{D6360C80-DBE0-478B-9BB3-34783210DB10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +133,10 @@ Global
 		{6E77DF07-04CD-4252-8231-4602734FD073}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E77DF07-04CD-4252-8231-4602734FD073}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E77DF07-04CD-4252-8231-4602734FD073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6360C80-DBE0-478B-9BB3-34783210DB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6360C80-DBE0-478B-9BB3-34783210DB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6360C80-DBE0-478B-9BB3-34783210DB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6360C80-DBE0-478B-9BB3-34783210DB10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,5 +158,6 @@ Global
 		{8A629A41-E43B-4BC9-9BAA-77CB9F8EE678} = {09A98156-6E76-4FE1-B3F2-73CC7BE8AE45}
 		{B61D7BDA-4A4C-41D6-B4C4-09567BCBB558} = {09A98156-6E76-4FE1-B3F2-73CC7BE8AE45}
 		{6E77DF07-04CD-4252-8231-4602734FD073} = {09A98156-6E76-4FE1-B3F2-73CC7BE8AE45}
+		{D6360C80-DBE0-478B-9BB3-34783210DB10} = {C352576A-81C1-429E-A0D4-1741B7EBB7E4}
 	EndGlobalSection
 EndGlobal
