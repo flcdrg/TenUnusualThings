@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B000079F-6C36-4C97-A6FB-860795831CEA}</ProjectGuid>
+    <ProjectGuid>{6E77DF07-04CD-4252-8231-4602734FD073}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SuperWebApp</RootNamespace>
-    <AssemblyName>SuperWebApp</AssemblyName>
+    <RootNamespace>SuperWebApp3</RootNamespace>
+    <AssemblyName>SuperWebApp3</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -259,9 +259,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>65339</DevelopmentServerPort>
+          <DevelopmentServerPort>62946</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/SuperWebApp</IISUrl>
+          <IISUrl>http://localhost/SuperWebApp3</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
