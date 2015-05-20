@@ -2,6 +2,7 @@
 
 namespace Generics
 {
+    // http://stackoverflow.com/a/1332344/25702
     class Program
     {
         static void Main(string[] args)

@@ -1,10 +1,13 @@
-﻿using System.Runtime.CompilerServices;
+﻿#define BEFORE
+using System.Runtime.CompilerServices;
 
-//[assembly: TypeForwardedTo(typeof(OldLibrary.Useful))]
+#if !BEFORE
+[assembly: TypeForwardedTo(typeof(OldLibrary.Useful))]
+#endif
 
 namespace OldLibrary
 {
-#if true
+#if BEFORE
     public class Useful
     {
         public int Calculation(int x, int y)

@@ -16,7 +16,7 @@ namespace TaskPatterns
                 await TimeSpan.FromSeconds(15);
 
                 Console.WriteLine("Ending");
-
+                Console.ReadLine();
             }).Wait();
         }
     }

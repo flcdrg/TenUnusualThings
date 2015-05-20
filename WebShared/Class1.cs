@@ -5,6 +5,8 @@ using System;
 
 namespace WebShared
 {
+    // http://blogs.technet.com/b/sateesh-arveti/archive/2011/11/30/look-at-sharing-common-assemblies-in-asp-net-4-5.aspx
+    // http://www.asp.net/aspnet/overview/aspnet-and-visual-studio-2012/whats-new#_Toc_perf_3
     public class Class1
     {
         public string TestMethod()

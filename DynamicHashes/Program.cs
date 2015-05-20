@@ -8,23 +8,23 @@ namespace DynamicHashes
     {
         static void Main(string[] args)
         {
-            dynamic bag = new Bag();
+            var bag = new OldBag();
 
-            //bag.Values["a"] = "b";
+            bag.Values["a"] = "b";
 
-            bag.a = "b";
+            //bag.fred = "blah";
+            //bag.a = "b";
 
-            Console.WriteLine(bag.a);
+            //Console.WriteLine(bag.a);
             Console.ReadLine();
         }
     }
 
-    public class Bag : DynamicObject
+    public class OldBag
     {
-        private IDictionary<string, string> _values;
+        private IDictionary<string, string> _values = new Dictionary<string, string>();
 
-        /*
-        private IDictionary<string, string> Values
+        public IDictionary<string, string> Values
         {
             get
             {
@@ -35,7 +35,13 @@ namespace DynamicHashes
                 _values = value;
             }
         }
-        */
+
+    }
+
+    public class Bag : DynamicObject
+    {
+        private IDictionary<string, string> _values;
+
         public Bag()
         {
             _values = new Dictionary<string, string>();
@@ -46,7 +52,6 @@ namespace DynamicHashes
             result = _values[binder.Name];
 
             return true;
-            //return base.TryGetMember(binder, out result);
         }
 
         public override bool TrySetMember(SetMemberBinder binder, object value)

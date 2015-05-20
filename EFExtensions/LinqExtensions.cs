@@ -4,7 +4,6 @@ using System.Linq.Expressions;
 
 namespace EFExtensions
 {
-    // http://trentacular.com/2010/08/linq-to-entities-wild-card-like-extension-method/
     public static class LinqExtensions
     {
         public static IQueryable<TSource> WhereStartsAndEndsWith<TSource>(

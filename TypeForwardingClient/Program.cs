@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TypeForwardingClient
 {
+    // Type forwarding
+    // https://msdn.microsoft.com/en-us/library/ms404275(v=vs.110).aspx
+    // http://www.codeproject.com/Articles/27268/Type-Forwarding-in-NET
     class Program
     {
         static void Main(string[] args)

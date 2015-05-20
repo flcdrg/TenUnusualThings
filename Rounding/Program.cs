@@ -2,6 +2,7 @@
 
 namespace Rounding
 {
+    // http://stackoverflow.com/questions/194484/whats-the-strangest-corner-case-youve-seen-in-c-sharp-or-net/195143
     class Program
     {
         static void Main(string[] args)
