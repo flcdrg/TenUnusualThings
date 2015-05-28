@@ -21,37 +21,16 @@ namespace TaskPatterns
         }
     }
 
-    public class TimeSpanAwaiter : INotifyCompletion
-    {
-        private readonly TimeSpan _value;
-
-        public TimeSpanAwaiter(TimeSpan value)
-        {
-            _value = value;
-        }
-
-        public void OnCompleted(Action continuation)
-        {
-            Console.WriteLine("Sleeping for {0} seconds. Don't you wish you set to to something smaller?", _value.TotalSeconds);
-            Thread.Sleep(_value);
-            continuation();
-        }
-
-        public bool IsCompleted
-        {
-            get { return false; }
-        }
-
-        public void GetResult()
-        {
-        }
-    }
-
     public static class TimeSpanExtensions
     {
-        public static TimeSpanAwaiter GetAwaiter(this TimeSpan value)
+        public static TaskAwaiter<object> GetAwaiter(this TimeSpan value)
         {
-            return new TimeSpanAwaiter(value);
+            var tcs = new TaskCompletionSource<object>();
+            var timer = new Timer(state => {
+                tcs.SetResult(null);
+            }, null, value, TimeSpan.FromMilliseconds(-1));
+            tcs.Task.ContinueWith(t => { timer.Dispose(); }, TaskContinuationOptions.ExecuteSynchronously);
+            return tcs.Task.GetAwaiter();
         }
     }
 }
