@@ -1,5 +1,6 @@
 ﻿#define BEFORE
 using System;
+using System.Diagnostics;
 using System.Linq;
 
 namespace EFExtensions
@@ -11,16 +12,18 @@ namespace EFExtensions
         {
             using (var context = new MyDbContext())
             {
+                context.Database.Log = (sql) => Debug.WriteLine(sql);
 #if BEFORE
                 var q =
-                    context.SalesOrderHeaders.Where(
-                        h => h.Customer.Store.Name.StartsWith("E") && h.Customer.Store.Name.EndsWith("E"));
+                    context.Stores.Where(
+                        h => h.Name.StartsWith("E") && h.Name.EndsWith("E"));
 #else
-                var q = context.SalesOrderHeaders.WhereStartsAndEndsWith(h => h.Customer.Store.Name, "E");
+                var q = context.Stores.WhereStartsAndEndsWith(h => h.Name, "E");
 #endif
-                foreach (var header in q.ToList())
+
+                foreach (var storeName in q.Select(s => s.Name).ToList())
                 {
-                    Console.WriteLine(header.Customer.Store.Name);
+                    Console.WriteLine(storeName);
                 }
             }
 
