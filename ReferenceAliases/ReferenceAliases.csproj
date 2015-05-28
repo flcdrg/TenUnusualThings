@@ -58,7 +58,7 @@
     <ProjectReference Include="..\ExternalLibrary\ExternalLibrary.csproj">
       <Project>{45c12d61-25ca-470a-9dc7-61f5b1841ba2}</Project>
       <Name>ExternalLibrary</Name>
-      <Aliases>External</Aliases>
+      <Aliases>global</Aliases>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

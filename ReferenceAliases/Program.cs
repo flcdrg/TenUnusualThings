@@ -1,4 +1,5 @@
-﻿//extern alias External;
+﻿// set ExternalLibrary aliases to 'External'
+//extern alias External;
 //using ILog = External::log4net.ILog;
 
 using log4net;
