@@ -33,8 +33,7 @@ namespace TaskPatterns
         public void OnCompleted(Action continuation)
         {
             Console.WriteLine("Sleeping for {0} seconds. Don't you wish you set to to something smaller?", _value.TotalSeconds);
-            Thread.Sleep(_value);
-            continuation();
+            Task.Delay(_value).GetAwaiter().OnCompleted(continuation);
         }
 
         public bool IsCompleted
