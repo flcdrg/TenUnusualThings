@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define First
+using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,10 +13,10 @@ namespace TaskPatterns
         {
             Task.Run(async () =>
             {
-                Console.WriteLine("Starting");
+                Console.WriteLine("Starting [{0}]", Thread.CurrentThread.ManagedThreadId);
                 await TimeSpan.FromSeconds(15);
 
-                Console.WriteLine("Ending");
+                Console.WriteLine("End [{0}]", Thread.CurrentThread.ManagedThreadId);
                 Console.ReadLine();
             }).Wait();
         }
@@ -32,8 +33,15 @@ namespace TaskPatterns
 
         public void OnCompleted(Action continuation)
         {
-            Console.WriteLine("Sleeping for {0} seconds. Don't you wish you set to to something smaller?", _value.TotalSeconds);
-            Task.Delay(_value).GetAwaiter().OnCompleted(continuation);
+            Console.WriteLine("Sleeping for {0} seconds. Don't you wish you set to to something smaller? [{1}]", _value.TotalSeconds, Thread.CurrentThread.ManagedThreadId);
+
+            // Original
+            Thread.Sleep(_value);
+
+            // NotifyCompletion 
+            // Task.Delay(_value).GetAwaiter().OnCompleted(continuation);
+
+            Console.WriteLine("After Sleep [{0}]", Thread.CurrentThread.ManagedThreadId);
         }
 
         public bool IsCompleted
@@ -48,9 +56,36 @@ namespace TaskPatterns
 
     public static class TimeSpanExtensions
     {
+#if First
         public static TimeSpanAwaiter GetAwaiter(this TimeSpan value)
         {
             return new TimeSpanAwaiter(value);
         }
+#elif Simple
+        // Easy
+        public static TaskAwaiter GetAwaiter(this TimeSpan value)
+        {
+            return Task.Delay(value).GetAwaiter();
+        }
+#else
+        // TaskCompletionSource Way
+        public static TaskAwaiter<object> GetAwaiter(this TimeSpan value)
+        {
+            Console.WriteLine("Sleeping for {0} seconds. Don't you wish you set to to something smaller? [{1}]", value.TotalSeconds, Thread.CurrentThread.ManagedThreadId);
+
+            var tcs = new TaskCompletionSource<object>();
+            var timer = new Timer(state => {
+                tcs.SetResult(null);
+            }, null, value, TimeSpan.FromMilliseconds(-1));
+            tcs.Task.ContinueWith(t =>
+            {
+                timer.Dispose();
+                Console.WriteLine("After Sleep [{0}]", Thread.CurrentThread.ManagedThreadId);
+
+            }, TaskContinuationOptions.ExecuteSynchronously);
+
+            return tcs.Task.GetAwaiter();
+        }
+#endif
     }
 }
