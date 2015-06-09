@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Reference Aliases", "01-Reference Aliases", "{0090C6D1-1D18-4108-83D3-4128A9F051F9}"
 EndProject
@@ -54,6 +54,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09-Linq Extensions", "09-Linq Extensions", "{6B855BF0-7865-4737-8292-D5CB612537BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExtensions", "EFExtensions\EFExtensions.csproj", "{9B928FF6-F46B-4C35-ADD7-7C05FD05A83D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11-Dates", "11-Dates", "{60ED2E8A-BB4F-4FFC-B317-8F3EC43000D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath", "DateMath\DateMath.csproj", "{AC1E2F91-69C9-4FB8-BD00-97D4AA491A91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +129,10 @@ Global
 		{9B928FF6-F46B-4C35-ADD7-7C05FD05A83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B928FF6-F46B-4C35-ADD7-7C05FD05A83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B928FF6-F46B-4C35-ADD7-7C05FD05A83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1E2F91-69C9-4FB8-BD00-97D4AA491A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1E2F91-69C9-4FB8-BD00-97D4AA491A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1E2F91-69C9-4FB8-BD00-97D4AA491A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1E2F91-69C9-4FB8-BD00-97D4AA491A91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,5 +154,6 @@ Global
 		{6E77DF07-04CD-4252-8231-4602734FD073} = {09A98156-6E76-4FE1-B3F2-73CC7BE8AE45}
 		{D6360C80-DBE0-478B-9BB3-34783210DB10} = {C352576A-81C1-429E-A0D4-1741B7EBB7E4}
 		{9B928FF6-F46B-4C35-ADD7-7C05FD05A83D} = {6B855BF0-7865-4737-8292-D5CB612537BD}
+		{AC1E2F91-69C9-4FB8-BD00-97D4AA491A91} = {60ED2E8A-BB4F-4FFC-B317-8F3EC43000D9}
 	EndGlobalSection
 EndGlobal
