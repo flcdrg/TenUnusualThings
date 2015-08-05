@@ -36,10 +36,10 @@ namespace TaskPatterns
             Console.WriteLine("Sleeping for {0} seconds. Don't you wish you set to to something smaller? [{1}]", _value.TotalSeconds, Thread.CurrentThread.ManagedThreadId);
 
             // Original
-            Thread.Sleep(_value);
+            // Thread.Sleep(_value);
 
             // NotifyCompletion 
-            // Task.Delay(_value).GetAwaiter().OnCompleted(continuation);
+            Task.Delay(_value).GetAwaiter().OnCompleted(continuation);
 
             Console.WriteLine("After Sleep [{0}]", Thread.CurrentThread.ManagedThreadId);
         }
